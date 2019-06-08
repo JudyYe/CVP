@@ -23,12 +23,12 @@ P {
 A {
 	FONT-WEIGHT: bolder; TEXT-DECORATION: none
 }
-A:link {
+/*A:link {
 	COLOR: #990000
-}
-A:visited {
+}*/
+/*A:visited {
 	COLOR: #666666
-}
+}*/
 UL {
 	MARGIN-TOP: 1px; MARGIN-BOTTOM: 15px
 }
