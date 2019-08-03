@@ -137,7 +137,7 @@ BODY {
     </h2></center>
     <center><h2>in ICCV 2019</h2></center>
 
-<center><h2><strong><a href="">[Paper]</a> | <a href="">[Code]</a> </strong> </h2></center> 
+<center><h2><strong><a href="">Paper</a> | <a href="">Code</a> | <a href="">Poster</a> | <a href="cvp_bib.txt">Bibtex</a> </strong> </h2></center> 
 <hr>
 
 <p>
@@ -163,6 +163,18 @@ We present an approach for pixel-level future prediction given an input image of
 </p>
 <hr>
 
+<h1 align="center">Method Overview</h1>
+
+<table border="0" cellspacing="10" cellpadding="0" align="center"> 
+  <tbody><tr><td>
+<img src="./src/pipeline.png" width="1000"> </a></td>   
+  </tr>
+  <tr><td>
+  Our model takes as input an image with known/detected location of entities. Each entity is represented as its location and an implicit feature. Given the current entity representations and a sampled latent variable, our prediction module predicts the representations at the next time step. Our learned decoder composes the predicted representations to an image representing the predicted future. During training, a latent encoder module is used to infer the distribution over the latent variables using the initial and final frames.</td></tr>
+</tbody>
+</table>
+
+<hr>
 <a href=""><img style="float: left; padding: 5px; PADDING-RIGHT: 10px; PADDING-LEFT: 100px;" alt="paper thumbnail" src="src/thumb.png" height=200></a>
 
 
