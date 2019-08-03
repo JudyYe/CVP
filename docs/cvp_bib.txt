@@ -1,0 +1,7 @@
+@article{ye2019cvp,
+  title={Compositional Video Prediction},
+  author={Ye, Yufei and Singh, Maneesh  and Gupta, Abhinav and Tulsiani, Shubham},
+  year={2019},
+  booktitle={International Conference on Computer Vision (ICCV)}
+}
+
