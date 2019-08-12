@@ -1,0 +1,11 @@
+examples/
+data/demo
+data/shapestacks
+__pycache__
+output
+*.pth
+*.DS_Store
+.idea/
+*.pyc
+*.txt
+venv/
