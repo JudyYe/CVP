@@ -1,5 +1,6 @@
 # Compositional Video Prediction
-
+Yufei Ye,    Maneesh Singh,    Abhinav Gupta*, and   Shubham Tulsiani*
+   
 [Project Page](https://judyye.github.io/CVP/), [Arxiv]() 
 ![](docs/pred1.gif)
 
@@ -17,12 +18,19 @@ To operationalize this idea, we propose **Compositional Video Prediction** (CVP)
 ## Citation
 If you find this work useful, please use the following BibTeX entry.
 
-```bib```
+```
+@article{ye2019cvp,
+  title={Compositional Video Prediction},
+  author={Ye, Yufei and Singh, Maneesh  and Gupta, Abhinav and Tulsiani, Shubham},
+  year={2019},
+  booktitle={International Conference on Computer Vision (ICCV)}
+}
+```
 
 ## Setup Repo
 The code was developed by Python 3.6 and PyTorch 0.4.
 
-`git clone ...`
+`git clone git@github.com:JudyYe/CVP.git`
 
 
 
