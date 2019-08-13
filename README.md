@@ -39,7 +39,7 @@ The code was developed by Python 3.6 and PyTorch 0.4.
 
 ## Demo: Predict video with pretrained model
 ```
-wget -O models/ours.pth -L https://www.dropbox.com/s/p8y4p8xngoh467y/ours.pth?dl=0 
+mkdir -p models/ && wget -O models/ours.pth -L https://www.dropbox.com/s/p8y4p8xngoh467y/ours.pth?dl=0 
 python demo.py --checkpoint models/ours.pth 
 ``` 
 
