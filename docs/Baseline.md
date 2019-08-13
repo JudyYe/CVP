@@ -7,7 +7,7 @@ The baselines are configured as the following:
  method | mod | graph | gconv_unit_type | encoder | decoder 
 ---:|:---: | :---: | :---: | :---: | :---:
 CVP (default) |  cvp | fact_gc | n2e2n | traj | comb_late
-No-Factor [[23]]((https://papers.nips.cc/paper/6194-generating-videos-with-scene-dynamics)) | **noFactor** | **fact_fc** | - | traj | **noFactor** 
+No-Factor [[23]](https://papers.nips.cc/paper/6194-generating-videos-with-scene-dynamics) | **noFactor** | **fact_fc** | - | traj | **noFactor** 
 No-Edge | cvp | fact_gc | **noEdge** | traj | comb_late
 Early-Feat | cvp | fact_gc | n2e2n | traj | **comb_early**
 Mid-Feat | cvp | fact_gc | n2e2n | traj | **comb_mid**
