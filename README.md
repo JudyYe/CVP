@@ -4,8 +4,6 @@ Yufei Ye,    Maneesh Singh,    Abhinav Gupta*, and   Shubham Tulsiani*
 [Project Page](https://judyye.github.io/CVP/), [Arxiv]() 
 ![](docs/pred1.gif)
 
-This code is a re-implementation of the paper [Compositional Video Prediciton](arxive link). The code is developed based on Pytorch framework.
-
 Given an initial frame, the task is to predict the next few frames in pixel level. The key insight is that a scene is comprised of distinct entities that undergo joint motions.
 To operationalize this idea, we propose **Compositional Video Prediction** (CVP), which consists of three main modules:
 1) **Entity Predictor**: predicts per-entity representation;
@@ -14,6 +12,11 @@ To operationalize this idea, we propose **Compositional Video Prediction** (CVP)
 
 ![](docs/pipeline.png)
 
+They jointly give us highly encouraging results compared to baseline methods as shown above. 
+
+This code repo is a re-implementation of the paper [Compositional Video Prediciton](arxive.link). The code is developed based on [Pytorch](https://pytorch.org/) framework. 
+It also integrates [LPIPS](https://github.com/richzhang/PerceptualSimilarity) for quantitative evaluation.
+    
 
 ## Citation
 If you find this work useful, please use the following BibTeX entry.
@@ -35,27 +38,32 @@ The code was developed by Python 3.6 and PyTorch 0.4.
 
 
 ## Demo: Predict video with pretrained model
-1. Download pretrained model [here](google drive) and put them to `models/`.   
-
-2. Use our models to predict videos for each image under `examples/`. This generates 5 random sampled videos. Each row corresponds to one sample. 
 ```
-python demo.py --checkpoint ${MODEL_PATH} --test_mod multi
+wget -O models/ours.pth -L https://www.dropbox.com/s/p8y4p8xngoh467y/ours.pth?dl=0 
+python demo.py --checkpoint models/ours.pth 
 ``` 
 
+The  command above downloads our pretrained model. Then  it hallucinates several videos (due to uncertainty) for each image under `examples/`.
+Each row corresponds to one possible future.  Please note:
+1.  For a full list of pretrain-model, please refer to [`Model.md`](docs/Model.md).   
+2. Feel free to add flag `--test_mod multi_${N}` to generate `N` number of  diverse futures. 
+```
+python demo.py --checkpoint ${MODEL_PATH} ----test_mod multi_2
+```
 
 ## Set up Dataset
-To quantitatively evaluate or to train your own models, you need to set up dataset first. 
+Before training models on your own or evaluating them quantitatively, you need to set up dataset first. 
 In the paper, results on two datasets are provided: the synthetic dataset [Shapestacks](https://shapestacks.robots.ox.ac.uk) and [PennAction](https://dreamdragon.github.io/PennAction/).  
 
 For a quick setup of ready-to-go data for Shapestacks, download and link to `data/shapestacks/`
 ```
  cd ${FOLDER_TO_SAVE_DATA}
- wget -O ss3456_render.tar.gz -L https://cmu.box.com/shared/static/fhv9b3nojecys5d2sprlyzi2xv8gjqzt.gz && tar xzf ss3456_render.tar.gz 
+ wget -O ss3456_render.tar.gz -L https://www.dropbox.com/s/6jllu13yqwrnql8/ss3456_render.tar.gz?dl=0 && tar xzf ss3456_render.tar.gz 
  ln -s ${FOLDER_TO_SAVE_DATA}/shapestacks data/shapestacks
 ```  
  
 
-Please read [`Dataset.md`](Dataset.md) for data format together with how to generate and preprocess the data.
+Please read [`Dataset.md`](docs/Dataset.md) for further explanation about data format together with how to generate and preprocess the data.
   
 
 ## Quantitative Evaluation
@@ -76,5 +84,5 @@ python train.py --gpu ${GPU_ID}
 ```
 
 We have provided code to reimplement baselines to ablate predictor, decoder, and encoder correspondingly.
-Please see [`Baseline.md`](Baseline.md) for further details. 
+Please see [`Baseline.md`](docs/Baseline.md) for further details. 
  

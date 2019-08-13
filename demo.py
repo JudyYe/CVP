@@ -13,7 +13,7 @@ from cvp.evaluator import Evaluator
 
 def multi(batch, model, evaluator, args):
     num_step = args.dt
-    num_future = 5
+    num_future = int(args.test_mod.split('_')[-1])
     multi_box = []
     multi_image = []
     for nz in range(num_future):

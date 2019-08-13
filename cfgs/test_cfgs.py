@@ -12,7 +12,7 @@ class TestOptions(BaseOptions):
     def initialize(self):
         BaseOptions.initialize(self)
         # For testing
-        self.parser.add_argument('--test_mod', default='multi', help='multi/best_100')
+        self.parser.add_argument('--test_mod', default='multi_5', help='multi/best_100')
         self.parser.add_argument('--test_split', default='test', type=str)
         self.parser.add_argument('--checkpoint', default=None, type=str)
         self.parser.add_argument('--num_val_samples', default=None, type=int)

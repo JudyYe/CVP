@@ -1,6 +1,7 @@
 examples/
 data/demo
 data/shapestacks
+models/
 __pycache__
 output
 *.pth
