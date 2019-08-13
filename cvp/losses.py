@@ -14,7 +14,7 @@ class LossManager(object):
         self.args = args
         self.D = self.args.embedding_dim
 
-        if args.mod in ['cvp', 'noFactor']:
+        if args.mod in ['cvp', 'noFactor', 'lp']:
             self.separate_losses = self._separate_losses
         elif args.mod in ['pokVaePos']:
             self.summerize_total_losses = self._pose_vae_loss

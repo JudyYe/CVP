@@ -14,7 +14,7 @@ To operationalize this idea, we propose **Compositional Video Prediction** (CVP)
 
 They jointly give us highly encouraging results compared to baseline methods as shown above. 
 
-This code repo is a re-implementation of the paper [Compositional Video Prediciton](arxive.link). The code is developed based on [Pytorch](https://pytorch.org/) framework. 
+This code repo is a re-implementation of the ICCV19 paper [Compositional Video Prediciton](arxive.link). The code is developed based on [Pytorch](https://pytorch.org/) framework. 
 It also integrates [LPIPS](https://github.com/richzhang/PerceptualSimilarity) for quantitative evaluation.
     
 
@@ -48,7 +48,7 @@ It should generates results similar to one column of [the one](https://judyye.gi
 1.  To download a full list of pretrain-model including baselines, please refer to [`Model.md`](docs/Model.md).   
 2. Feel free to add flag `--test_mod multi_${N}` to generate `N` number of  diverse futures. 
 ```
-python demo.py --checkpoint ${MODEL_PATH} ----test_mod multi_2
+python demo.py --checkpoint ${MODEL_PATH} --test_mod multi_2
 ```
 
 ## Set up Dataset

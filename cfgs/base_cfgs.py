@@ -73,7 +73,7 @@ class BaseOptions():
         parser.add_argument('--fac_hidden_dims', default='[512]', type=int_list)
 
         # Decoder options
-        parser.add_argument('--decoder', default='comb', type=str, choices=['comb', 'noFactor', 'cPix'])
+        parser.add_argument('--decoder', default='comb_late', type=str)
         parser.add_argument('--dec_dims', default='256,128,64,32,16,8', type=int_tuple)  # * 32
         parser.add_argument('--dec_norm', default='batch')
         parser.add_argument('--dec_act', default='leakyrelu')
@@ -99,6 +99,12 @@ class BaseOptions():
     def set_default_args(self, args):
         if self.isTrain:
             args.batch_size = args.bs // args.dt
+            if args.decoder.startswith('comb'):
+                dec_dims = {'early': (256,128,64,32),
+                            'mid': (256,128,64,32,16),
+                            'late': (256,128,64,32,16,8),
+                            'comb': args.dec_dims}
+                args.dec_dims = dec_dims[args.decoder.split('_')[-1]]
         else:
             model_path = args.checkpoint
             pretrained_dict = torch.load(model_path)

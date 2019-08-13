@@ -19,13 +19,12 @@ def get_model_name(args):
     name += '%s%s_%s' % (args.dataset, args.modality, args.mod)
     name += '_%s' % (args.encoder)
     name += '_%s' % (args.decoder)
-    name += '%d' % args.dec_dims[-1]
+    # name += '%d' % args.dec_dims[-1]
     name += '_%s_%s' % (args.graph, args.gconv_unit_type)
     if args.appr_fea_loss:
         name += '_Pfea%g' % args.appr_loss_weight
     if args.appr_pix_loss:
         name += '_Ppix%g' % args.l1_dst_loss_weight
-    # name += '_%d%d' % (args.gconv_stop_grad, args.recon_stop_grad)
     return name
 
 

@@ -23,7 +23,6 @@ def main(args):
     model.type(float_dtype)
     model.train()
     # print(model)
-
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
     t, epoch = 0, 0
     checkpoint = {

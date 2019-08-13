@@ -66,7 +66,7 @@ class BaseBG(nn.Module):
             'activation': args.dec_act,
             'radius': args.radius / args.image_size[0],
         }
-        self.decoder = DecoderFactory[args.decoder](**dec_kwargs)
+        self.decoder = DecoderFactory[args.decoder.split('_')[0]](**dec_kwargs)
 
         # build gcn
         gconv_kwargs = {

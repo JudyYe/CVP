@@ -19,15 +19,15 @@ python train.py --gpu ${GPU_ID} --gconv_unit_type noEdge
 ### Frame Decoder
 - Early-Feat
 ```
-python train.py --dec_dims 256,128,64,32
+python train.py --decoder comb_early
 ```
 - Mid-Feat
 ```
-python train.py --dec_dims 256,128,64,32,16
+python train.py --decoder comb_mid
 ```
 - Late-Feat (ours)
 ```
-python train.py --dec_dims 256,128,64,32,16,8
+python train.py --decoder comb_late
 ```
 - Pixel
 ```
