@@ -67,8 +67,8 @@ Please read [`Dataset.md`](docs/Dataset.md) for further explanation about data f
   
 
 ## Quantitative Evaluation
-The best scores among K (K=100) samples are recorded. See paper for further explanation. 
-(The quality of frame is evaluated based on code repo [LPIPS](https://github.com/richzhang/PerceptualSimilarity))
+The best scores among K (K=100) samples are recorded. (See paper for further explanation.) 
+The quality of frame is evaluated based on code repo [LPIPS](https://github.com/richzhang/PerceptualSimilarity).
 ```
 python test.py --checkpoint ${PATH_TO_MODEL} --test_mod best_100 --dataset ss3
 ```
