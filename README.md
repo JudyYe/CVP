@@ -44,8 +44,8 @@ python demo.py --checkpoint models/ours.pth
 ``` 
 
 The  command above downloads our pretrained model. Then  it hallucinates several videos (due to uncertainty) for each image under `examples/`.
-Each row corresponds to one possible future.  Please note:
-1.  For a full list of pretrain-model, please refer to [`Model.md`](docs/Model.md).   
+It should generates results similar to one column of [the one](https://judyye.github.io/CVP/src/encBest1.gif) in our website. Each row corresponds to one possible future.  Please note:
+1.  To download a full list of pretrain-model including baselines, please refer to [`Model.md`](docs/Model.md).   
 2. Feel free to add flag `--test_mod multi_${N}` to generate `N` number of  diverse futures. 
 ```
 python demo.py --checkpoint ${MODEL_PATH} ----test_mod multi_2
