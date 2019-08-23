@@ -1,7 +1,7 @@
 # Compositional Video Prediction
 Yufei Ye,    Maneesh Singh,    Abhinav Gupta*, and   Shubham Tulsiani*
    
-[Project Page](https://judyye.github.io/CVP/), [Arxiv]() 
+[Project Page](https://judyye.github.io/CVP/), [Arxiv](http://arxiv.org/abs/1908.08522) 
 ![](docs/pred1.gif)
 
 Given an initial frame, the task is to predict the next few frames in pixel level. The key insight is that a scene is comprised of distinct entities that undergo joint motions.
